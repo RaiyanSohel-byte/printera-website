@@ -3,7 +3,6 @@ import { Check } from "lucide-react";
 import sign1 from "../../../public/sign1.png";
 import sign2 from "../../../public/sign2.png";
 import sign3 from "../../../public/sign3.png";
-import eclipse from "../../../public/eclipse.png";
 import Title from "../shared/Title";
 const Hero = () => {
   const features = [
@@ -34,7 +33,8 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4 pt-4">
             <button className="btn-primary">Get Started</button>
             <button className="btn-outline">Read More</button>
-          </div>{" "}
+          </div>
+          {/* Eclipse design */}
           <div
             className="hidden lg:block w-60 h-60 rounded-full bg-[#F5CA46]/50 absolute -bottom-30 -right-30
                 [clip-path:polygon(50%_0%,100%_0%,100%_50%,50%_50%)] rotate-270"
