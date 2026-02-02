@@ -3,7 +3,6 @@ import Title from "../shared/Title";
 import hqImage from "../../../public/highQService.png";
 import customizeImage from "../../../public/customizeService.png";
 import homeDeliveryImage from "../../../public/homeDeliveryService.png";
-import Image from "next/image";
 import ServiceCard from "../cards/ServiceCard";
 const Services = () => {
   const services = [
