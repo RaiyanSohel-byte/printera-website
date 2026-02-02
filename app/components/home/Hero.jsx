@@ -1,16 +1,16 @@
-// components/Hero.tsx
 import Image from "next/image";
 import { Check } from "lucide-react";
-
+import sign1 from "../../../public/sign1.png";
+import sign2 from "../../../public/sign2.png";
+import sign3 from "../../../public/sign3.png";
 const Hero = () => {
-  // We define data here so it could easily be fetched from a CMS in a real SSR scenario
   const features = [
     "Quality Services Provider",
     "Printing, Designing and Transportation",
   ];
 
   return (
-    <section className="bg-[#f3f5ff] py-16 px-4 md:px-8 lg:px-16">
+    <section className="py-16 px-4 md:px-8 lg:px-0">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left Content Column */}
         <div className="lg:col-span-5 space-y-6">
@@ -34,12 +34,8 @@ const Hero = () => {
           </ul>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <button className="bg-[#ef231c] hover:bg-red-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-red-200">
-              Get Started
-            </button>
-            <button className="bg-white border-2 border-red-100 hover:border-red-500 text-[#ef231c] px-8 py-4 rounded-xl font-bold transition-all">
-              Read More
-            </button>
+            <button className="btn-primary">Get Started</button>
+            <button className="btn-outline">Read More</button>
           </div>
         </div>
 
@@ -48,7 +44,7 @@ const Hero = () => {
           {/* Main Featured Image */}
           <div className="md:col-span-2 relative group overflow-hidden rounded-3xl h-[400px] md:h-[500px]">
             <Image
-              src="/path-to-anchor-sign.jpg" // Replace with actual path
+              src={sign1} // Replace with actual path
               alt="ADA Signage Example"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -66,7 +62,7 @@ const Hero = () => {
             {/* Top Side Image */}
             <div className="relative h-[240px] rounded-3xl overflow-hidden group">
               <Image
-                src="/path-to-cottage-sign.jpg"
+                src={sign2}
                 alt="Print on Demand Service"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform"
@@ -78,7 +74,7 @@ const Hero = () => {
             {/* Bottom Side Image */}
             <div className="relative h-[240px] rounded-3xl overflow-hidden group">
               <Image
-                src="/path-to-business-cards.jpg"
+                src={sign3}
                 alt="Business Card Design"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform"
