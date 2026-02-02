@@ -4,7 +4,7 @@
   @apply text-white text-[10px] lg:text-[14px] rounded-[12px] bg-[#EB221E] h-[30px] w-[100px] lg:h-[50px] lg:w-[160px] cursor-pointer;
 }
 .btn-outline {
-  @apply text-[#EB221E] text-[14px] rounded-[12px] border border-[#EB221E] h-[50px] w-[160px] cursor-pointer;
+  @apply text-[#EB221E] text-[10px] lg:text-[14px] rounded-[12px] border border-[#EB221E] h-[30px] w-[100px] lg:h-[50px] lg:w-[160px] cursor-pointer;
 }
 .input {
   @apply border border-[#42425566] p-2 rounded-3xl py-3 px-12;
