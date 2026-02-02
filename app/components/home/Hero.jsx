@@ -4,6 +4,7 @@ import sign1 from "../../../public/sign1.png";
 import sign2 from "../../../public/sign2.png";
 import sign3 from "../../../public/sign3.png";
 import eclipse from "../../../public/eclipse.png";
+import Title from "../shared/Title";
 const Hero = () => {
   const features = [
     "Quality Services Provider",
@@ -18,9 +19,7 @@ const Hero = () => {
           <p className="text-red-500 font-bold tracking-widest text-sm uppercase">
             Printing Service Company
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-[40px] font-extrabold text-[#1e2330] leading-tight">
-            Pixel Perfect Printing
-          </h1>
+          <Title>Pixel Perfect Printing</Title>
           <p className="text-lg text-gray-600 font-medium">
             Bring Your Ideas to Life with High-Quality Prints
           </p>
@@ -36,6 +35,10 @@ const Hero = () => {
             <button className="btn-primary">Get Started</button>
             <button className="btn-outline">Read More</button>
           </div>{" "}
+          <div
+            className="hidden lg:block w-60 h-60 rounded-full bg-[#F5CA46]/50 absolute -bottom-30 -right-30
+                [clip-path:polygon(50%_0%,100%_0%,100%_50%,50%_50%)] rotate-270"
+          ></div>
         </div>
 
         {/* Right Visuals Column */}
