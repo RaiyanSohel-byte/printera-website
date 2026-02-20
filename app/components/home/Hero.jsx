@@ -32,7 +32,7 @@ const Hero = () => {
           </ul>
           <div className="flex flex-wrap gap-4 pt-4">
             <button className="btn-primary">Get Started</button>
-            <button className="btn-outline">Read More</button>
+            <button className="btn-outline">Request a Quote</button>
           </div>
           {/* Eclipse design */}
           <div
