@@ -5,18 +5,15 @@ import cart from "../../../public/cart.png";
 import user from "../../../public/user.png";
 import MobileNavbar from "./MobileNavbar";
 import Link from "next/link";
+import { ShoppingCart, User } from "lucide-react";
 const Navbar = () => {
   return (
     <nav className="flex justify-between items-center py-4 px-4 lg:px-0 max-w-[1200px] mx-auto">
       {/* logo */}
       <div>
-        <Image
-          src={logo}
-          alt="Logo"
-          width={275}
-          height={60}
-          className="lg:w-[173px] w-[150px] h-[40px] lg:h-[38px]"
-        />
+        <Link href={"/"}>
+          <Image src={logo} alt="Printera Logo" width={150} height={50} />
+        </Link>
       </div>
 
       {/* NavLinks */}
@@ -56,20 +53,13 @@ const Navbar = () => {
         />
 
         <div className="flex gap-2.5">
-          <Image
-            src={cart}
-            alt="Logo"
-            width={30}
-            height={30}
-            className="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] mx-auto"
-          />
-          <Image
-            src={user}
-            alt="Logo"
-            width={30}
-            height={30}
-            className="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] mx-auto"
-          />
+          <Link href="/cart">
+            {" "}
+            <ShoppingCart color="#3D3D3D" size={32} />
+          </Link>
+          <Link href="/account">
+            <User color="#3D3D3D" size={32} />
+          </Link>
         </div>
       </div>
 

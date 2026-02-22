@@ -74,7 +74,7 @@ export default function CheckoutFlow() {
                   : s.id}
                 </div>
                 <span
-                  className={`font-black text-sm ${isActive || isCompleted ? "text-[#1e1e2d]" : "text-gray-300"}`}
+                  className={`font-black text-sm hidden lg:block ${isActive || isCompleted ? "text-[#1e1e2d]" : "text-gray-300"}`}
                 >
                   {s.label}
                 </span>
