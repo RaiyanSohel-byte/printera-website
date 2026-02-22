@@ -1,0 +1,185 @@
+"use client"; // Required for usePathname
+
+import {
+  Box,
+  Camera,
+  CreditCard,
+  Edit3,
+  Heart,
+  HeartCrack,
+  History,
+  Mail,
+  MapPin,
+  Phone,
+  Settings,
+  Settings2,
+  User,
+} from "lucide-react";
+import React from "react";
+import Ad from "../components/shared/Ad";
+import Navbar from "../components/shared/Navbar";
+import Footer from "../components/shared/Footer";
+import Link from "next/link";
+import { usePathname } from "next/navigation"; // Import to detect active route
+
+const DashboardLayout = ({ children }) => {
+  const pathname = usePathname(); // Get current URL path
+
+  const stats = [
+    {
+      label: "Total Orders",
+      value: "24",
+      icon: <Box className="text-white" />,
+      bgColor: "bg-blue-500",
+    },
+    {
+      label: "Total Spent",
+      value: "$8,450",
+      icon: <CreditCard className="text-white" />,
+      bgColor: "bg-emerald-500",
+    },
+    {
+      label: "Saved Designs",
+      value: "12",
+      icon: <Heart className="text-white" />,
+      bgColor: "bg-purple-500",
+    },
+    {
+      label: "Active Projects",
+      value: "3",
+      icon: <Settings className="text-white" />,
+      bgColor: "bg-orange-500",
+    },
+  ];
+
+  const navItems = [
+    { name: "Overview", path: "/dashboard", icon: <User size={16} /> },
+    {
+      name: "Order History",
+      path: "/dashboard/order-history",
+      icon: <History size={16} />,
+    },
+    {
+      name: "Saved Designs",
+      path: "/dashboard/saved-designs",
+      icon: <HeartCrack size={16} />,
+    },
+    {
+      name: "Settings",
+      path: "/dashboard/settings",
+      icon: <Settings2 size={16} />,
+    },
+  ];
+
+  return (
+    <div>
+      <Ad />
+      <Navbar />
+      <div className="min-h-screen bg-gray-50 px-4 py-10 md:px-8 md:py-20 text-[#1e1e2d]">
+        <div className="max-w-6xl mx-auto space-y-6">
+          {/* PROFILE HEADER CARD */}
+          <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 flex flex-col md:flex-row items-center justify-between shadow-sm gap-6">
+            <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+              <div className="relative">
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-gray-200 overflow-hidden border-4 border-white shadow-md">
+                  <img
+                    src="/api/placeholder/150/150"
+                    alt="Avatar"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <button className="absolute bottom-0 right-0 bg-blue-600 p-1.5 rounded-full border-2 border-white text-white hover:bg-blue-700 transition-colors">
+                  <Camera size={14} />
+                </button>
+              </div>
+              <div className="space-y-2">
+                <h2 className="text-xl font-black">John Doe</h2>
+                <p className="text-gray-500 font-medium text-sm md:text-base">
+                  Acme Corporation
+                </p>
+                <div className="flex flex-col md:flex-row flex-wrap gap-2 md:gap-4 text-sm text-gray-500">
+                  <span className="flex items-center justify-center md:justify-start gap-1.5">
+                    <Mail size={14} /> john.doe@company.com
+                  </span>
+                  <span className="flex items-center justify-center md:justify-start gap-1.5">
+                    <Phone size={14} /> +1 (555) 123-4567
+                  </span>
+                  <span className="flex items-center justify-center md:justify-start gap-1.5">
+                    <MapPin size={14} /> New York, NY
+                  </span>
+                </div>
+              </div>
+            </div>
+            <Link
+              href={"/dashboard/settings/edit-profile"}
+              className="w-full md:w-auto flex items-center justify-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-100"
+            >
+              <Edit3 size={18} /> Edit Profile
+            </Link>
+          </div>
+
+          {/* STATS GRID */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+            {stats.map((stat, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-4 md:p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"
+              >
+                <div>
+                  <p className="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
+                    {stat.label}
+                  </p>
+                  <p className="text-lg md:text-2xl font-black">{stat.value}</p>
+                </div>
+                <div
+                  className={`${stat.bgColor} p-2 md:p-3 rounded-xl shadow-inner`}
+                >
+                  {React.cloneElement(stat.icon, {
+                    size: 18,
+                    className: "text-white",
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* NAVIGATION TABS */}
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <div className="flex overflow-x-auto border-b border-gray-100 px-6 scrollbar-hide">
+              {navItems.map((item) => {
+                // If the path is exactly '/dashboard', check for equality.
+                // Otherwise, use startsWith to catch nested routes (like settings/edit-profile).
+                const isActive =
+                  item.path === "/dashboard" ?
+                    pathname === "/dashboard"
+                  : pathname.startsWith(item.path);
+
+                return (
+                  <Link
+                    href={item.path}
+                    key={item.name}
+                    className={`px-4 py-4 text-sm font-bold transition-colors border-b-2 whitespace-nowrap ${
+                      isActive ?
+                        "border-blue-600 text-blue-600"
+                      : "border-transparent text-gray-400 hover:text-gray-600"
+                    }`}
+                  >
+                    <span className="flex items-center gap-2">
+                      {item.icon}
+                      {item.name}
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+
+            <div className="w-full overflow-hidden p-6 md:p-8">{children}</div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default DashboardLayout;

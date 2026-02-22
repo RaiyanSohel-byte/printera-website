@@ -17,9 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${sora.className} antialiased `}>
-        <div>{children}</div>
-      </body>
+      <body className={`${sora.className} antialiased `}>{children}</body>
     </html>
   );
 }
