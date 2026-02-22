@@ -2,7 +2,12 @@
 import React from "react";
 import Image from "next/image";
 import { ExternalLink, Zap, Package, Palette } from "lucide-react";
-
+import promo1 from "../../public/promo/promo1.png";
+import promo2 from "../../public/promo/promo2.png";
+import promo3 from "../../public/promo/promo3.png";
+import promo4 from "../../public/promo/promo4.png";
+import promo5 from "../../public/promo/promo5.png";
+import promo6 from "../../public/promo/promo6.png";
 // 1. Data Definitions
 const FEATURED_PRODUCTS = [
   {
@@ -11,7 +16,7 @@ const FEATURED_PRODUCTS = [
     category: "Writing Instruments",
     price: "0.89",
     min: "100+",
-    image: "/promo/pen.jpg",
+    image: promo1,
   },
   {
     id: 2,
@@ -19,7 +24,7 @@ const FEATURED_PRODUCTS = [
     category: "Bags & Accessories",
     price: "2.25",
     min: "50+",
-    image: "/promo/tote.jpg",
+    image: promo2,
   },
   {
     id: 3,
@@ -27,7 +32,7 @@ const FEATURED_PRODUCTS = [
     category: "Drinkware",
     price: "4.50",
     min: "35+",
-    image: "/promo/mugs.jpg",
+    image: promo3,
   },
   {
     id: 4,
@@ -35,7 +40,7 @@ const FEATURED_PRODUCTS = [
     category: "Technology",
     price: "5.99",
     min: "25+",
-    image: "/promo/usb.jpg",
+    image: promo4,
   },
   {
     id: 5,
@@ -43,7 +48,7 @@ const FEATURED_PRODUCTS = [
     category: "Apparel",
     price: "8.15",
     min: "50+",
-    image: "/promo/tshirts.jpg",
+    image: promo5,
   },
   {
     id: 6,
@@ -51,7 +56,7 @@ const FEATURED_PRODUCTS = [
     category: "Drinkware",
     price: "6.25",
     min: "48+",
-    image: "/promo/bottles.jpg",
+    image: promo6,
   },
 ];
 

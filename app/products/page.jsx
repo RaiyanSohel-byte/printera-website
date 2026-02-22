@@ -1,7 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { X } from "lucide-react";
+import prod1 from "../../public/all products/prod1.png";
+import prod2 from "../../public/all products/prod2.png";
+import prod3 from "../../public/all products/prod3.png";
+import prod4 from "../../public/all products/prod4.png";
+import prod5 from "../../public/all products/prod5.png";
+import prod6 from "../../public/all products/prod6.png";
+import Link from "next/link";
 
 // 1. Data Structures
 
@@ -12,7 +18,7 @@ const PRODUCTS = [
     description: "ADA compliant restroom signage with Braille",
     price: 45,
     materials: ["Acrylic", "Plastic"],
-    image: "/products/restroom.jpg",
+    image: prod1,
   },
   {
     id: 2,
@@ -20,7 +26,7 @@ const PRODUCTS = [
     description: "Customizable room number signs with Braille",
     price: 38,
     materials: ["Acrylic", "Metal", "Plastic"],
-    image: "/products/room-id.jpg",
+    image: prod2,
   },
   {
     id: 3,
@@ -28,7 +34,7 @@ const PRODUCTS = [
     description: "Durable vinyl banners for any event",
     price: 65,
     materials: ["Canvas"],
-    image: "/products/banner.jpg",
+    image: prod3,
   },
   {
     id: 4,
@@ -36,7 +42,7 @@ const PRODUCTS = [
     description: "Professional metal nameplates",
     price: 28,
     materials: ["Acrylic", "Metal", "Plastic", "Phenolic"],
-    image: "/products/nameplate.jpg",
+    image: prod4,
   },
   {
     id: 5,
@@ -44,7 +50,7 @@ const PRODUCTS = [
     description: "Modern acrylic nameplate designs",
     price: 32,
     materials: ["Plastic"],
-    image: "/products/acrylic-logo.jpg",
+    image: prod5,
   },
   {
     id: 6,
@@ -52,7 +58,7 @@ const PRODUCTS = [
     description: "Custom printed decals and stickers",
     price: 15,
     materials: ["Vinyl", "Magnetic"],
-    image: "/products/decal.jpg",
+    image: prod6,
   },
 ];
 
@@ -106,9 +112,12 @@ const ProductCard = ({ product }) => (
         </span>
       </div>
 
-      <button className="w-full bg-[#EE2A24] text-white py-3 rounded-xl font-bold transition-all hover:bg-[#d6221c] active:scale-[0.98]">
+      <Link
+        href={`/products/${product.id}`}
+        className="w-full bg-[#EE2A24] flex justify-center items-center text-white py-3 rounded-xl font-bold transition-all hover:bg-[#d6221c] active:scale-[0.98]"
+      >
         Customize Now
-      </button>
+      </Link>
     </div>
   </div>
 );

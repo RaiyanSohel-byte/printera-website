@@ -2,54 +2,77 @@
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
-
+import port1 from "../../public/portfolio/port1.png";
+import port2 from "../../public/portfolio/port2.png";
+import port3 from "../../public/portfolio/port3.png";
+import port4 from "../../public/portfolio/port4.png";
+import port5 from "../../public/portfolio/port5.png";
+import port6 from "../../public/portfolio/port6.png";
+import port7 from "../../public/portfolio/port7.png";
+import port8 from "../../public/portfolio/port8.png";
 // 1. Data Structure - Centralized for easy updates
 const PROJECTS = [
   {
     id: 1,
-    title: "POLARIS Office Signage",
+    title: "City Hall ADA Signage Package",
     category: "Corporate Offices",
     description:
       "Direct-mounted high-end acrylic signage system for medical buildings.",
-    image: "/portfolio/office-1.jpg",
+    image: port1,
   },
   {
     id: 2,
-    title: "Hospital Wayfinding System",
+    title: "Corporate Office Nameplates",
     category: "Government Projects",
     description:
       "Multi-floor directional signage with high-contrast ADA compliance.",
-    image: "/portfolio/gov-1.jpg",
+    image: port2,
   },
   {
     id: 3,
-    title: "Retail Store Branding",
+    title: "Hospital Wayfinding System",
     category: "Retail",
     description:
       "Custom dimensional letters and window vinyl for high-traffic retail.",
-    image: "/portfolio/retail-1.jpg",
+    image: port3,
   },
   {
     id: 4,
-    title: "University Campus Signs",
+    title: "Retail Store Signage",
     category: "Government Projects",
     description: "Exterior pylon and building identification signage.",
-    image: "/portfolio/gov-2.jpg",
+    image: port4,
   },
   {
     id: 5,
-    title: "Law Firm Office Suite",
+    title: "University Campus Signs",
     category: "Corporate Offices",
     description: "Polished metal nameplates and frosted glass partitions.",
-    image: "/portfolio/office-2.jpg",
+    image: port5,
   },
   {
     id: 6,
-    title: "Restaurant Branding Package",
+    title: "Law Firm Office Suite",
     category: "Retail",
     description:
       "Full exterior and interior signage for a boutique restaurant.",
-    image: "/portfolio/retail-2.jpg",
+    image: port6,
+  },
+  {
+    id: 7,
+    title: "Restaurant Branding Package",
+    category: "Government Projects",
+    description:
+      "Custom-designed directional and informational signage for museum exhibits.",
+    image: port7,
+  },
+  {
+    id: 8,
+    title: "Government Building Directory",
+    category: "Retail",
+    description:
+      "Complete branding solution for a luxury hotel including lobby and guest room signage.",
+    image: port8,
   },
 ];
 
