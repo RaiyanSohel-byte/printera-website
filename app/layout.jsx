@@ -4,15 +4,6 @@ import Navbar from "./components/shared/Navbar";
 import Ad from "./components/shared/Ad";
 import Footer from "./components/shared/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 const sora = Sora({
   variable: "--font-sora",
   subsets: ["latin"],
@@ -27,12 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${sora.className} antialiased `}>
-        <Ad />
-        <div>
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+        <div>{children}</div>
       </body>
     </html>
   );

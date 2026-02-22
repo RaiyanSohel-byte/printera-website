@@ -2,14 +2,14 @@
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
-import port1 from "../../public/portfolio/port1.png";
-import port2 from "../../public/portfolio/port2.png";
-import port3 from "../../public/portfolio/port3.png";
-import port4 from "../../public/portfolio/port4.png";
-import port5 from "../../public/portfolio/port5.png";
-import port6 from "../../public/portfolio/port6.png";
-import port7 from "../../public/portfolio/port7.png";
-import port8 from "../../public/portfolio/port8.png";
+import port1 from "../../../public/portfolio/port1.png";
+import port2 from "../../../public/portfolio/port2.png";
+import port3 from "../../../public/portfolio/port3.png";
+import port4 from "../../../public/portfolio/port4.png";
+import port5 from "../../../public/portfolio/port5.png";
+import port6 from "../../../public/portfolio/port6.png";
+import port7 from "../../../public/portfolio/port7.png";
+import port8 from "../../../public/portfolio/port8.png";
 // 1. Data Structure - Centralized for easy updates
 const PROJECTS = [
   {

@@ -180,7 +180,12 @@ export default function SignageConfigurator() {
                   </h3>
 
                   <div className="grid grid-cols-2 gap-3">
-                    {["Acrylic", "Metal"].map((mat) => (
+                    {[
+                      "Acrylic",
+                      "Metal",
+                      "Brushed Aluminum",
+                      "Stainless Steel",
+                    ].map((mat) => (
                       <button
                         key={mat}
                         onClick={() => setConfig({ ...config, material: mat })}

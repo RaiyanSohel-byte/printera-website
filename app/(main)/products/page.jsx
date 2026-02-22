@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import prod1 from "../../public/all products/prod1.png";
-import prod2 from "../../public/all products/prod2.png";
-import prod3 from "../../public/all products/prod3.png";
-import prod4 from "../../public/all products/prod4.png";
-import prod5 from "../../public/all products/prod5.png";
-import prod6 from "../../public/all products/prod6.png";
+import prod1 from "../../../public/all products/prod1.png";
+import prod2 from "../../../public/all products/prod2.png";
+import prod3 from "../../../public/all products/prod3.png";
+import prod4 from "../../../public/all products/prod4.png";
+import prod5 from "../../../public/all products/prod5.png";
+import prod6 from "../../../public/all products/prod6.png";
 import Link from "next/link";
 
 // 1. Data Structures

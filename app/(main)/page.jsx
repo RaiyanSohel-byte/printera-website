@@ -1,13 +1,10 @@
-import CategoryBrowse from "./components/home/CategoryBrowse";
-import ExperienceExcellence from "./components/home/ExperienceExcellence";
-import Hero from "./components/home/Hero";
-import HeroForm from "./components/home/HeroForm";
-import LogoBgSection from "./components/home/LogoBgSection";
-import Quality from "./components/home/Quality";
-import Services from "./components/home/Services";
-import ShopByProduct from "./components/home/ShopByProduct";
-import TestimonialSlider from "./components/home/TestimonialSlider";
-
+import CategoryBrowse from "../components/home/CategoryBrowse";
+import ExperienceExcellence from "../components/home/ExperienceExcellence";
+import Hero from "../components/home/Hero";
+import Quality from "../components/home/Quality";
+import ShopByProduct from "../components/home/ShopByProduct";
+import TestimonialSlider from "../components/home/TestimonialSlider";
+import LogoBgSection from "../components/home/LogoBgSection";
 export default function Home() {
   return (
     <div>

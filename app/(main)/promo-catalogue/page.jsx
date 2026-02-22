@@ -2,12 +2,12 @@
 import React from "react";
 import Image from "next/image";
 import { ExternalLink, Zap, Package, Palette } from "lucide-react";
-import promo1 from "../../public/promo/promo1.png";
-import promo2 from "../../public/promo/promo2.png";
-import promo3 from "../../public/promo/promo3.png";
-import promo4 from "../../public/promo/promo4.png";
-import promo5 from "../../public/promo/promo5.png";
-import promo6 from "../../public/promo/promo6.png";
+import promo1 from "../../../public/promo/promo1.png";
+import promo2 from "../../../public/promo/promo2.png";
+import promo3 from "../../../public/promo/promo3.png";
+import promo4 from "../../../public/promo/promo4.png";
+import promo5 from "../../../public/promo/promo5.png";
+import promo6 from "../../../public/promo/promo6.png";
 // 1. Data Definitions
 const FEATURED_PRODUCTS = [
   {
