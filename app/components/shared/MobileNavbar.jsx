@@ -43,9 +43,10 @@ const MobileNavbar = () => {
             <div className="flex flex-col space-y-1">
               {[
                 { name: "Home", href: "/" },
-                { name: "About", href: "/about" },
-                { name: "Services", href: "/services" },
-                { name: "Contact", href: "/contact" },
+                { name: "Products", href: "/products" },
+                { name: "Promo Catalogue", href: "/promo-catalogue" },
+                { name: "Portfolio", href: "/portfolio" },
+                { name: "Request a Quote", href: "/request-quote" },
               ].map((link) => (
                 <Link
                   key={link.name}

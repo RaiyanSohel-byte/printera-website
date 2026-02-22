@@ -9,6 +9,7 @@ import product5 from "../../../public/Products/product5.png";
 import product6 from "../../../public/Products/product6.png";
 import product7 from "../../../public/Products/product7.png";
 import product8 from "../../../public/Products/product8.png";
+import Link from "next/link";
 const PRODUCTS = [
   {
     id: 1,
@@ -139,13 +140,13 @@ export default function ShopByProduct() {
 
         {/* Footer Link */}
         <div className="mt-12 text-center">
-          <a
-            href="/all-products"
+          <Link
+            href="/products"
             className="inline-flex items-center text-[#EE2A24] font-semibold hover:underline group"
           >
             View All Products
             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
