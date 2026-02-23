@@ -19,7 +19,7 @@ const Hero = () => {
           <p className="text-red-500 font-bold tracking-widest text-sm uppercase">
             Printing Service Company
           </p>
-          <Title>Pixel Perfect Printing</Title>
+          <Title>Plastic Letters & Signs</Title>
           <p className="text-lg text-gray-600 font-medium">
             Bring Your Ideas to Life with High-Quality Prints
           </p>
