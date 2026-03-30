@@ -8,6 +8,7 @@ import promo3 from "../../../public/promo/promo3.png";
 import promo4 from "../../../public/promo/promo4.png";
 import promo5 from "../../../public/promo/promo5.png";
 import promo6 from "../../../public/promo/promo6.png";
+import Link from "next/link";
 // 1. Data Definitions
 const FEATURED_PRODUCTS = [
   {
@@ -103,9 +104,12 @@ const ProductCard = ({ product }) => (
           <span className="text-[10px] text-gray-400 font-medium">minimum</span>
         </div>
       </div>
-      <button className="w-full bg-[#EE2A24] text-white py-3 rounded-lg font-bold text-sm transition-colors hover:bg-[#d6221c]">
+      <Link
+        href={"/request-quote"}
+        className="w-full flex justify-center items-center bg-[#EE2A24] text-white py-3 rounded-lg font-bold text-sm transition-colors hover:bg-[#d6221c]"
+      >
         Request Quote
-      </button>
+      </Link>
     </div>
   </div>
 );
